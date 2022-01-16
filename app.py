@@ -7,7 +7,6 @@ import logging
 from flask_jwt_extended import JWTManager, set_access_cookies, create_access_token, get_jwt_identity, get_jwt
 from flask_cors import CORS
 from flask import Flask
-from utils.cfg import CONFIG
 
 # from api import groups_api
 
@@ -16,7 +15,7 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True, resources={r'*': {"origins": "*"}})
 
 JWTManager(app)
-app.config['JWT_SECRET_KEY'] = CONFIG.JWT_SECRET
+app.config['JWT_SECRET_KEY'] = CONFIG.JWT_SECRET # TODO: make .env
 app.config['JWT_TOKEN_LOCATION'] = ['cookies']
 app.config['JWT_CSRF_IN_COOKIES'] = True
 app.config['JWT_COOKIE_CSRF_PROTECT'] = False

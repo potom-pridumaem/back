@@ -19,7 +19,7 @@ def register_group(group_name):
         admin_id=user_id
     )
     sess.add(group)
-    sess.commit()
+    sess.commit() #
     user_group = UG(
         group_id=group.id,
         user_id=user_id
