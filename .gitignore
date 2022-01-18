@@ -3,3 +3,4 @@
 venv
 utils/cfg.py
 *.pyc
+.env

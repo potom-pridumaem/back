@@ -1,9 +1,4 @@
-import random
-from utils.cfg import CONFIG
 import bcrypt
-import vk
-
-token = CONFIG.VK_TOCKEN
 
 
 def hash_password(password):
