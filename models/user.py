@@ -13,6 +13,12 @@ class User(BaseModel):
 class UserGet(User):
     id: int
 
+    class Config:
+        orm_mode = True
+
 
 class UserCreate(User):
     password: str
+
+    class Config:
+        orm_mode = True
